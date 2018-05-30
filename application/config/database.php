@@ -1,6 +1,14 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
+/**
+ * ----------------------------------------------------------------
+ * Load in the configuration file from the root of the application
+ * ----------------------------------------------------------------
+ */
+$configurationJSON = file_get_contents('../config.json');
+$configurationJSON = json_decode($configurationJSON);
+
 /*
 | -------------------------------------------------------------------
 | DATABASE CONNECTIVITY SETTINGS
@@ -75,18 +83,18 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => 'localhost',
-	'username' => '',
-	'password' => '',
-	'database' => '',
+	'hostname' => $configurationJSON->DATABASE->HOST . ":" . $configurationJSON->DATABASE->PORT,
+	'username' => $configurationJSON->DATABASE->USER,
+	'password' => $configurationJSON->DATABASE->PASS,
+	'database' => $configurationJSON->DATABASE->NAME,
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
 	'db_debug' => (ENVIRONMENT !== 'production'),
 	'cache_on' => FALSE,
 	'cachedir' => '',
-	'char_set' => 'utf8',
-	'dbcollat' => 'utf8_general_ci',
+	'char_set' => 'utf8mb4',
+	'dbcollat' => 'utf8mb4_general_ci',
 	'swap_pre' => '',
 	'encrypt' => FALSE,
 	'compress' => FALSE,

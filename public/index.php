@@ -97,7 +97,7 @@ switch (ENVIRONMENT)
  * This variable must contain the name of your "system" directory.
  * Set the path if it is not in the same directory as this file.
  */
-	$system_path = 'system';
+	$system_path = '../system';
 
 /*
  *---------------------------------------------------------------
@@ -114,7 +114,7 @@ switch (ENVIRONMENT)
  *
  * NO TRAILING SLASH!
  */
-	$application_folder = 'application';
+	$application_folder = '../application';
 
 /*
  *---------------------------------------------------------------
@@ -176,7 +176,10 @@ switch (ENVIRONMENT)
  *
  * Un-comment the $assign_to_config array below to use this feature
  */
-	// $assign_to_config['name_of_config_item'] = 'value of config item';
+	// GET configuration from the JSON file
+	$configurationJSON = file_get_contents('../config.json');
+	$configurationJSON = json_decode($configurationJSON);
+	$assign_to_config['configurationJSON'] = $configurationJSON;
 
 
 
