@@ -176,10 +176,7 @@ switch (ENVIRONMENT)
  *
  * Un-comment the $assign_to_config array below to use this feature
  */
-	// GET configuration from the JSON file
-	$configurationJSON = file_get_contents('../config.json');
-	$configurationJSON = json_decode($configurationJSON);
-	$assign_to_config['configurationJSON'] = $configurationJSON;
+	// $assign_to_config['configurationJSON'] = $configurationJSON;
 
 
 

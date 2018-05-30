@@ -1,0 +1,73 @@
+/**
+ * ----------------------------------------------------------------
+ * Zonal Marketing Technologies
+ * ----------------------------------------------------------------
+ * Zonal Fallback CSS
+ * ----------------------------------------------------------------
+ */
+
+/* ---------------------------------------------------------------- */
+/* --------------------------Minimal Reset------------------------- */
+/* ---------------------------------------------------------------- */
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* ---------------------------------------------------------------- */
+/* -----------------------Components Styling----------------------- */
+/* ---------------------------------------------------------------- */
+body{
+    font-family: 'Open Sans', sans-serif;
+    text-rendering: optimizeLegibility;
+    background: #8DCDCB;
+}
+
+.clearfix{
+    clear: both;
+}
+
+.hidden{
+    display: none !important;
+    visibility: hidden !important;
+}
+
+#wrapper{
+    width: 100%;
+    max-width: 600px;
+    display: block;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+section{
+    width: 1005;
+    display: block;
+    position: relative;
+    padding: 20px;
+}
+
+h1, h2{
+    width: 100%;
+    display: block;
+    position: relative;
+    margin-bottom: 20px;
+    color: #fff;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.8em;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+h2{
+    font-size: 1.4em;
+    text-transform: initial;
+}
+
+h1::selection, h2::selection{
+    background: rgb(60, 60, 59);
+    color: #ffffff;
+}
